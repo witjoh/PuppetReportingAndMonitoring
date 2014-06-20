@@ -28,10 +28,10 @@ Changes done to the code
 * In `jobs/puppet.rb`
   * convert the local time (`Time.now`) to UTC using the `gmtime` method. Timestamps are recorded in UTS in puppetdb
 
-    utc_time = Time.now.gmtime
-    time_past = (utc_time - 1800)
-    ftime_now = utc_time.strftime("%FT%T")
-    ftime_past = time_past.strftime("%FT%T")
+    `utc_time = Time.now.gmtime`
+    `time_past = (utc_time - 1800)`
+    `ftime_now = utc_time.strftime("%FT%T")`
+    `ftime_past = time_past.strftime("%FT%T")`
 
   * Added the puppetdb variable, and adjusted the URI's.
 * in `dashboard/puppet.erb`
