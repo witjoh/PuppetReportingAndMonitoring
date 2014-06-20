@@ -37,8 +37,8 @@ Changes done to the code
 * in `dashboard/puppet.erb`
   * the widgets for the changed/pending/failed  adjusted for the meter widget (were still number widget)
 
-    '''
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
+    
+    `<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
       <div data-id="pupchanged" data-view="Meter" data-min="0" data-max="100" data-title="Changed" style="background-color:#96bf48"></div>  
     </li>  
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
@@ -46,8 +46,7 @@ Changes done to the code
     </li>  
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
       <div data-id="pupfailed" data-view="Meter" data-min="0" data-max="100" data-title="Failed" class="status-danger"></div>  
-    </li>  
-    '''
+    </li>`  
     
 * Added in the README.md of the code, that the variable puppetdb='localhost' should be adjusted when using a remote puppetdb
 
