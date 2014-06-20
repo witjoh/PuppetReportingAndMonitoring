@@ -28,24 +28,26 @@ Changes done to the code
 * In `jobs/puppet.rb`
   * convert the local time (`Time.now`) to UTC using the `gmtime` method. Timestamps are recorded in UTS in puppetdb
 
-    utc_time = Time.now.gmtime  
-    time_past = (utc_time - 1800)  
-    ftime_now = utc_time.strftime("%FT%T")  
-    ftime_past = time_past.strftime("%FT%T")  
+    utc_time = Time.now.gmtime
+    time_past = (utc_time - 1800)
+    ftime_now = utc_time.strftime("%FT%T")
+    ftime_past = time_past.strftime("%FT%T")
 
   * Added the puppetdb variable, and adjusted the URI's.
 * in `dashboard/puppet.erb`
   * the widgets for the changed/pending/failed  adjusted for the meter widget (were still number widget)
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
-      <div data-id="pupchanged" data-view="Meter" data-min="0" data-max="100" data-title="Changed" style="background-color:#96bf48"></div>  
-    </li>  
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
-      <div data-id="puppending" data-view="Meter" data-min="0" data-max="100" data-title="Pending" ></div>  
-    </li>  
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">  
-      <div data-id="pupfailed" data-view="Meter" data-min="0" data-max="100" data-title="Failed" class="status-danger"></div>  
-    </li>  
+    `<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pupchanged" data-view="Meter" data-min="0" data-max="100" data-title="Changed" style="background-color:#96bf48"></div>
+    </li>`
+
+    `<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="puppending" data-view="Meter" data-min="0" data-max="100" data-title="Pending" ></div>
+    </li>`
+
+    `<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pupfailed" data-view="Meter" data-min="0" data-max="100" data-title="Failed" class="status-danger"></div>
+    </li>`
 
 * Added in the README.md of the code, that the variable puppetdb='localhost' should be adjusted when using a remote puppetdb
 
